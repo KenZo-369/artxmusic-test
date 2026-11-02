@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f2eb">
+  <meta name="description" content="ArtXMusic verbindet Kunst, Musik und Menschen. Entdecke unseren Verein, zukünftige Events und Rückblicke. Beyond the Spotlight.">
+  <title>ArtXMusic — Beyond the Spotlight</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt</a>
+  <header class="site-header">
+    <a class="wordmark" href="#start" aria-label="ArtXMusic – zur Startseite">Art<span class="brand-x">X</span>Music</a>
+    <button class="menu-toggle" aria-controls="navigation" aria-expanded="false"><span>Menü</span><span aria-hidden="true">＋</span></button>
+    <nav id="navigation" aria-label="Hauptnavigation">
+      <a href="#events">Events<span class="nav-number">01</span></a>
+      <a href="#verein">Über uns<span class="nav-number">02</span></a>
+      <a href="#kontakt">Kontakt<span class="nav-number">03</span></a>
+      <a class="nav-cta" href="#mitmachen">Mitmachen <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero page-width" id="start" aria-labelledby="hero-title">
+      <div class="hero-eyebrow"><span class="status-dot"></span> KUNST × MUSIK × MENSCHEN <span class="hero-location">BASED IN SWITZERLAND</span></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">KUNST.<br>MUSIK.<br><span class="serif-word">Und du.</span></h1>
+          <p>Eine Plattform für neue Stimmen.<br>Ein Raum für das, was uns verbindet.</p>
+          <a class="text-link" href="#events">Unsere Events entdecken <span class="arrow-circle" aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-art" aria-label="Grafische Komposition aus Festivalmotiv und weißem X">
+          <span class="art-coordinate coordinate-top" aria-hidden="true">AXM / INDEPENDENT CULTURE</span>
+          <div class="art-cross" aria-hidden="true"></div>
+          <figure class="hero-photo"><img src="assets/festival-2026.jpg" alt="Bäume in leuchtendem Blau, Pink und Grün bei Nacht" width="1800" height="1009" fetchpriority="high"><figcaption>ART MEETS SOUND.</figcaption></figure>
+          <span class="art-note">Mehr als ein Moment.<br>Eine Verbindung.</span>
+          <div class="round-stamp" aria-hidden="true"><span>BEYOND THE</span><strong>↗</strong><span>SPOTLIGHT</span></div>
+          <span class="art-coordinate coordinate-bottom" aria-hidden="true">01 — WHERE IT ALL CONNECTS</span>
+        </div>
+      </div>
+      <div class="hero-footer"><span>UNABHÄNGIG. OFFEN. MITEINANDER.</span><a href="#verein">Das ist ArtXMusic <span aria-hidden="true">↓</span></a><span class="hero-edition">EST. IN SWITZERLAND</span></div>
+    </section>
+
+    <div class="manifesto-strip" aria-label="Beyond the Spotlight"><div><span>BEYOND THE SPOTLIGHT</span><span class="strip-x" aria-hidden="true">✳</span><span>KUNST VERBINDET</span><span class="strip-x" aria-hidden="true">✳</span><span>MUSIK BEWEGT</span><span class="strip-x" aria-hidden="true">✳</span></div></div>
+
+    <section class="events-section page-width section-space" id="events" aria-labelledby="events-title">
+      <div class="section-topline"><span class="eyebrow">01 / ZUSAMMEN ERLEBEN</span><span class="small-note">Neue Begegnungen. Bleibende Erinnerungen.</span></div>
+      <div class="section-heading"><h2 id="events-title">Hier passiert<span class="serif-word"> Verbindung.</span></h2><span class="small-cross" aria-hidden="true">×</span></div>
+      <div class="event-tabs" role="tablist" aria-label="Veranstaltungen filtern">
+        <button id="tab-future" role="tab" aria-selected="true" aria-controls="panel-future" tabindex="0">Zukünftige Events <span aria-hidden="true">↗</span></button>
+        <button id="tab-past" role="tab" aria-selected="false" aria-controls="panel-past" tabindex="-1">Vergangene Events <span class="count">01</span></button>
+      </div>
+      <div id="panel-future" class="future-panel" role="tabpanel" aria-labelledby="tab-future">
+        <div class="future-mark" aria-hidden="true">↗</div>
+        <div class="future-copy"><span class="eyebrow">DAS NÄCHSTE KAPITEL</span><h3>Hier geht es weiter.</h3><p>Aktuell ist kein neuer Termin angekündigt.<br>Bis dahin: Entdecke unseren ersten Festivalrückblick.</p><button class="text-link" data-show-past>Zum Rückblick 2026 <span aria-hidden="true">↗</span></button></div>
+        <a class="instagram-note" href="https://www.instagram.com/artxmusicfestival/" target="_blank" rel="noopener noreferrer"><span>IN VERBINDUNG BLEIBEN</span>Folge uns auf Instagram ↗</a>
+      </div>
+      <div id="panel-past" role="tabpanel" aria-labelledby="tab-past" hidden>
+        <article class="event-card">
+          <a class="event-image" href="festival-2026.html" aria-label="ArtXMusic Festival 2026 – Rückblick ansehen"><img src="assets/festival-2026.jpg" alt="Farbig beleuchtete Bäume – das Bildmotiv des ArtXMusic Festival 2026" width="1800" height="1009" loading="lazy"><span class="event-tag">RÜCKBLICK / 2026</span><span class="image-arrow" aria-hidden="true">↗</span></a>
+          <div class="event-card-copy"><span class="eyebrow">04.–05. SEPTEMBER 2026 · DORNACH</span><h3><a href="festival-2026.html">ArtXMusic<br><span class="serif-word">Festival.</span></a></h3><p>Kunst und Musik an einem Ort.<br>Unser Festival in der Tipioase.</p><a class="text-link" href="festival-2026.html">Zum Rückblick <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-section section-space" id="verein" aria-labelledby="about-title">
+      <div class="page-width"><div class="section-topline"><span class="eyebrow">02 / DIE IDEE DAHINTER</span><span class="small-note">Ein Verein. Viele Perspektiven.</span></div>
+      <div class="about-grid"><h2 id="about-title">Für neue<br>Stimmen.<br><span class="serif-word">Für uns alle.</span></h2><div class="about-copy"><span class="about-symbol" aria-hidden="true">×</span><p class="lead">Nicht jede starke Idee steht schon im Rampenlicht. Wir schaffen Raum dafür.</p><p>ArtXMusic verbindet Kunst und Musik. Unser «X» steht für die Begegnung dazwischen – zwischen Menschen, Ausdrucksformen und neuen Perspektiven.</p><p>Als Verein geben wir besonders aufstrebenden Kunstschaffenden, Musiker:innen und DJs eine Plattform. Für erste Auftritte, neue Verbindungen und kreative Entwicklung.</p><p>Mit Events, Projekten und Kooperationen fördern wir Austausch, Gemeinschaft und kulturelle Vielfalt.</p><a class="text-link" href="#mitmachen">Deine Idee hat hier Platz <span aria-hidden="true">↗</span></a></div></div>
+      <div class="team-intro"><h3>Die Menschen dahinter<span aria-hidden="true"> ↘</span></h3><span class="small-note">Drei Perspektiven. Eine gemeinsame Idee.</span></div>
+      <div class="team-grid">
+        <article class="team-card"><h4>Michelle Gyr</h4><p class="team-caption">Events & kreative Begegnungen</p><details open><summary>Mehr über Michelle <span aria-hidden="true">＋</span></summary><div class="bio"><p>Michelle kommt ursprünglich aus dem Transport- und Zollbereich. Über praktische Projekte und ihre Ausbildung zur Eventmanagerin fand sie zur Veranstaltungswelt – und lernte dabei Vincent kennen.</p><p>Mit ihrem gemeinsamen Abschlussprojekt «ArtConnection» legten sie den Grundstein für die Idee, neuen kreativen Stimmen eine Plattform zu geben. Diese Erfahrung bringt sie in ArtXMusic ein.</p></div></details></article>
+        <article class="team-card"><h4>Adriano Fontana</h4><p class="team-caption">Kunst, Raum & Licht</p><details open><summary>Mehr über Adriano <span aria-hidden="true">＋</span></summary><div class="bio"><p>Adriano ist Galerist, Kurator, Lichtdesigner und Inhaber von arkadia-design.ch. Er verbindet Kunst, Raum und Licht zu erlebbaren Atmosphären.</p><p>Mit der Programmgestaltung von Halle 80 und dem Hair Atelier schafft er Raum für zeitgenössische Kunst und Dialog. Offenheit, Experimentierfreude, klare Formen und ein bewusster Umgang mit Materialien prägen seine Arbeit.</p></div></details></article>
+        <article class="team-card"><h4>Vincent Villard</h4><p class="team-caption">Musik, Visuals & Verbindung</p><details open><summary>Mehr über Vincent <span aria-hidden="true">＋</span></summary><div class="bio"><p>Vincent beschäftigt sich mit visueller Kommunikation und digitalen Räumen an der Hochschule für Gestaltung und Kunst Basel. Seine kreativen Felder reichen von DJing und Musikproduktion bis zu Visuals und Kunst.</p><p>Aus seiner Erfahrung mit Kunst- und Musikevents wächst der Wunsch, Menschen zusammenzubringen. Er möchte Orte schaffen, an denen Austausch, gemeinsame kreative Energie und Zugehörigkeit entstehen.</p></div></details></article>
+      </div></div>
+    </section>
+
+    <section class="participate-section page-width section-space" id="mitmachen" aria-labelledby="participate-title"><div class="participate-label eyebrow">03 / DEIN PLATZ IST HIER</div><div class="participate-content"><h2 id="participate-title">Gute Ideen brauchen<br><span class="serif-word">gute Gesellschaft.</span></h2><div><p>Du machst Kunst oder Musik? Du möchtest mitgestalten oder mit uns zusammenarbeiten? Lass uns ins Gespräch kommen.</p><a class="solid-button" href="mailto:artxmusicfestival@outlook.com?subject=Bei%20ArtXMusic%20mitmachen">Lass uns etwas bewegen <span aria-hidden="true">↗</span></a><a class="membership-link" href="mailto:artxmusicfestival@outlook.com?subject=Interesse%20an%20einer%20Mitgliedschaft">Interesse an einer Mitgliedschaft? Schreib uns. ↗</a></div></div></section>
+  </main>
+
+  <footer class="site-footer" id="kontakt"><div class="page-width"><div class="footer-top"><span class="eyebrow">IN VERBINDUNG BLEIBEN</span><a href="#start" class="back-top" aria-label="Zurück nach oben">↑</a></div><a class="footer-email" href="mailto:artxmusicfestival@outlook.com">Sag <span class="serif-word">Hallo.</span><span aria-hidden="true">↗</span></a><div class="footer-links"><a href="mailto:artxmusicfestival@outlook.com">artxmusicfestival@outlook.com ↗</a><a href="https://www.instagram.com/artxmusicfestival/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><span>ARTXMUSIC · SCHWEIZ</span></div><div class="footer-brand" aria-hidden="true">Art<span>X</span>Music</div><div class="footer-bottom"><span>© 2026 ArtXMusic</span><span>BEYOND THE SPOTLIGHT.</span><span>Kunst. Musik. Miteinander.</span></div></div></footer>
+</body>
+</html>
