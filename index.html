@@ -1,85 +1,125 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f2eb">
-  <meta name="description" content="ArtXMusic verbindet Kunst, Musik und Menschen. Entdecke unseren Verein, zukünftige Events und Rückblicke. Beyond the Spotlight.">
-  <title>ArtXMusic — Beyond the Spotlight</title>
+  <meta name="theme-color" content="#f5f4f0">
+  <meta name="description" content="ArtXMusic at Gallery Arkadia Design: 21–24 January 2027, Gerbergasse 16, 4051 Basel. Apply by emailing us your work." data-i18n-content="t105">
+  <title data-i18n="event.arkadia.title">ArtXMusic — Arkadia Design · January 2027</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <link rel="preload" href="assets/fonts/manrope-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=20261103-editorial-01">
+  <link rel="stylesheet" href="layout.css?v=20261103-editorial-01">
+  <script src="i18n.js?v=20261103-editorial-01" defer></script>
+  <script src="donations.js?v=20261102-2208" defer></script>
+  <script src="background-video.js?v=20261103-editorial-01" defer></script>
+  <script src="app.js?v=20261103-editorial-01" defer></script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Zum Inhalt</a>
+<body id="top">
+  <div class="site-background" aria-hidden="true">
+    <video id="site-background-video" data-background-video autoplay muted loop playsinline preload="none" poster="assets/festival-background-poster.jpg" tabindex="-1">
+      <source data-src="assets/festival-background.mp4" type="video/mp4">
+    </video>
+  </div>
+  <button class="background-toggle" type="button" data-background-toggle aria-controls="site-background-video hero-festival-video" hidden>
+    <span data-background-pause hidden><svg class="background-toggle-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M8 5v14M16 5v14"/></svg><span data-i18n="background.pause">Pause background</span></span>
+    <span data-background-play><svg class="background-toggle-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="m8 5 11 7-11 7Z"/></svg><span data-i18n="background.play">Play background</span></span>
+  </button>
+
+  <a class="skip-link" href="#main"><span data-i18n="t000">Skip to content</span></a>
   <header class="site-header">
-    <a class="wordmark" href="#start" aria-label="ArtXMusic – zur Startseite">Art<span class="brand-x">X</span>Music</a>
-    <button class="menu-toggle" aria-controls="navigation" aria-expanded="false"><span>Menü</span><span aria-hidden="true">＋</span></button>
-    <nav id="navigation" aria-label="Hauptnavigation">
-      <a href="#events">Events<span class="nav-number">01</span></a>
-      <a href="#verein">Über uns<span class="nav-number">02</span></a>
-      <a href="#kontakt">Kontakt<span class="nav-number">03</span></a>
-      <a class="nav-cta" href="#mitmachen">Mitmachen <span aria-hidden="true">↗</span></a>
-    </nav>
-  </header>
+<a class="wordmark" href="#top" aria-label="ArtXMusic — home" data-i18n-aria-label="t092">ArtXMusic</a>
+<a class="header-donate" data-donate href="https://go.twint.ch/1/e/tw?tw=acq.vQNoNnbLTWy0y0OU8Lz0jm_Cxkv4LPFudftPimvvcaQTjJB5cDMrlpiIhuMeUNQD." target="_blank" rel="noopener noreferrer" aria-label="Donate now with TWINT" data-i18n-aria-label="donate.header.label"><span data-i18n="donate.header">Donate</span><span class="donation-provider">TWINT</span><svg class="action-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+<div class="header-actions">
+<nav id="navigation" aria-label="Main navigation" data-i18n-aria-label="t093">
+<a href="#events">Events</a>
+<a href="#verein"><span data-i18n="t002">About us</span></a>
+<a href="#kontakt"><span data-i18n="t003">Contact</span></a>
+<a class="nav-cta" href="#mitmachen"><span data-i18n="t004">Get involved</span> <svg class="action-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+</nav>
+<div class="language-switch" role="group" aria-label="Choose language" data-i18n-aria-label="t118"><button type="button" data-language="de" lang="de" aria-label="Switch to German" aria-pressed="false" data-i18n-aria-label="t119">DE</button><span aria-hidden="true">/</span><button type="button" data-language="en" lang="en" aria-label="Switch to English" aria-pressed="true" data-i18n-aria-label="t120">EN</button></div>
+<button class="menu-toggle" aria-controls="navigation" aria-expanded="false"><span><span data-i18n="t001">Menu</span></span><span aria-hidden="true">＋</span></button>
+</div></header>
 
   <main id="main">
-    <section class="hero page-width" id="start" aria-labelledby="hero-title">
-      <div class="hero-eyebrow"><span class="status-dot"></span> KUNST × MUSIK × MENSCHEN <span class="hero-location">BASED IN SWITZERLAND</span></div>
-      <div class="hero-grid">
+    <section class="hero featured-event page-width" id="start" aria-labelledby="hero-title">
+      <div class="hero-meta"><span data-i18n="quiet.identity">Art and music. Together.</span><span data-i18n="t121">BASED IN BASEL, SWITZERLAND</span></div>
+      <div class="featured-event-grid">
         <div class="hero-copy">
-          <h1 id="hero-title">KUNST.<br>MUSIK.<br><span class="serif-word">Und du.</span></h1>
-          <p>Eine Plattform für neue Stimmen.<br>Ein Raum für das, was uns verbindet.</p>
-          <a class="text-link" href="#events">Unsere Events entdecken <span class="arrow-circle" aria-hidden="true">↗</span></a>
+          <p class="eyebrow" data-i18n="event.arkadia.label">Next event</p>
+          <h1 id="hero-title"><span data-i18n="event.arkadia.gallery">Gallery</span><span class="featured-event-name">Arkadia Design</span></h1>
+          <div class="featured-event-details">
+          <p class="featured-event-date" data-i18n="event.arkadia.date">21–24 January 2027</p>
+          <p class="featured-event-address">Gerbergasse 16<br>4051 Basel</p>
+          <a class="solid-button application-button" data-apply href="mailto:artxmusicfestival@outlook.com?subject=Application%20%E2%80%93%20ArtXMusic%20at%20Arkadia%20Design%20%E2%80%93%2021%E2%80%9324%20January%202027" data-i18n-href="event.arkadia.mailto"><span data-i18n="event.arkadia.apply">Submit your work</span><svg class="action-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+          <p class="application-note" data-i18n="event.arkadia.note">Email us your work or a link to your portfolio.</p>
+          <a class="application-email" href="mailto:artxmusicfestival@outlook.com">artxmusicfestival@outlook.com</a>
+          </div>
         </div>
-        <div class="hero-art" aria-label="Grafische Komposition aus Festivalmotiv und weißem X">
-          <span class="art-coordinate coordinate-top" aria-hidden="true">AXM / INDEPENDENT CULTURE</span>
-          <div class="art-cross" aria-hidden="true"></div>
-          <figure class="hero-photo"><img src="assets/festival-2026.jpg" alt="Bäume in leuchtendem Blau, Pink und Grün bei Nacht" width="1800" height="1009" fetchpriority="high"><figcaption>ART MEETS SOUND.</figcaption></figure>
-          <span class="art-note">Mehr als ein Moment.<br>Eine Verbindung.</span>
-          <div class="round-stamp" aria-hidden="true"><span>BEYOND THE</span><strong>↗</strong><span>SPOTLIGHT</span></div>
-          <span class="art-coordinate coordinate-bottom" aria-hidden="true">01 — WHERE IT ALL CONNECTS</span>
-        </div>
+        <figure class="hero-film">
+          <div class="hero-film-heading"><span class="eyebrow" data-i18n="editorial.film.label">Art in motion</span><span class="film-mark" aria-hidden="true">↗</span></div>
+          <a class="hero-film-link" href="festival-2026.html" aria-label="ArtXMusic Festival 2026 — explore the recap" data-i18n-aria-label="t097">
+            <video id="hero-festival-video" data-background-video autoplay muted loop playsinline preload="none" poster="assets/festival-background-poster.jpg" tabindex="-1" aria-hidden="true"><source data-src="assets/festival-background.mp4" type="video/mp4"></video>
+            <span class="image-arrow" aria-hidden="true"><svg class="action-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
+          </a>
+          <figcaption data-i18n="editorial.film.caption">From the festival archive · 04–05.09.2026</figcaption>
+        </figure>
       </div>
-      <div class="hero-footer"><span>UNABHÄNGIG. OFFEN. MITEINANDER.</span><a href="#verein">Das ist ArtXMusic <span aria-hidden="true">↓</span></a><span class="hero-edition">EST. IN SWITZERLAND</span></div>
+      <div class="featured-event-footer"><p><span data-i18n="t009">A platform for new voices.</span> <span data-i18n="t010">A space for what brings us together.</span></p><a class="text-link" href="#events" data-i18n="event.arkadia.all">All events</a></div>
     </section>
 
-    <div class="manifesto-strip" aria-label="Beyond the Spotlight"><div><span>BEYOND THE SPOTLIGHT</span><span class="strip-x" aria-hidden="true">✳</span><span>KUNST VERBINDET</span><span class="strip-x" aria-hidden="true">✳</span><span>MUSIK BEWEGT</span><span class="strip-x" aria-hidden="true">✳</span></div></div>
+    <div class="manifesto-strip" aria-label="ArtXMusic manifesto" data-i18n-aria-label="design.manifesto"><div><span class="strip-message" data-i18n="t016">ART CONNECTS</span><span class="strip-motto">BEYOND THE SPOTLIGHT</span><span class="strip-message" data-i18n="t017">MUSIC CONNECTS</span></div></div>
 
     <section class="events-section page-width section-space" id="events" aria-labelledby="events-title">
-      <div class="section-topline"><span class="eyebrow">01 / ZUSAMMEN ERLEBEN</span><span class="small-note">Neue Begegnungen. Bleibende Erinnerungen.</span></div>
-      <div class="section-heading"><h2 id="events-title">Hier passiert<span class="serif-word"> Verbindung.</span></h2><span class="small-cross" aria-hidden="true">×</span></div>
-      <div class="event-tabs" role="tablist" aria-label="Veranstaltungen filtern">
-        <button id="tab-future" role="tab" aria-selected="true" aria-controls="panel-future" tabindex="0">Zukünftige Events <span aria-hidden="true">↗</span></button>
-        <button id="tab-past" role="tab" aria-selected="false" aria-controls="panel-past" tabindex="-1">Vergangene Events <span class="count">01</span></button>
+      <div class="section-topline"><span class="eyebrow"><span data-i18n="t018">Events &amp; encounters</span></span><span class="small-note"><span data-i18n="t019">New encounters. Lasting memories.</span></span></div>
+      <div class="section-heading"><h2 id="events-title" data-i18n="editorial.program">Programme</h2></div>
+      <div class="event-tabs" role="tablist" aria-label="Filter events" data-i18n-aria-label="t096">
+        <button id="tab-future" role="tab" aria-selected="true" aria-controls="panel-future" tabindex="0"><span data-i18n="t022">Upcoming events</span> <svg class="action-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></button>
+        <button id="tab-past" role="tab" aria-selected="false" aria-controls="panel-past" tabindex="-1"><span data-i18n="t023">Past events</span> <span class="count">01</span></button>
       </div>
       <div id="panel-future" class="future-panel" role="tabpanel" aria-labelledby="tab-future">
-        <div class="future-mark" aria-hidden="true">↗</div>
-        <div class="future-copy"><span class="eyebrow">DAS NÄCHSTE KAPITEL</span><h3>Hier geht es weiter.</h3><p>Aktuell ist kein neuer Termin angekündigt.<br>Bis dahin: Entdecke unseren ersten Festivalrückblick.</p><button class="text-link" data-show-past>Zum Rückblick 2026 <span aria-hidden="true">↗</span></button></div>
-        <a class="instagram-note" href="https://www.instagram.com/artxmusicfestival/" target="_blank" rel="noopener noreferrer"><span>IN VERBINDUNG BLEIBEN</span>Folge uns auf Instagram ↗</a>
+        <div class="future-label" data-i18n="event.arkadia.date">21–24 January 2027</div>
+        <div class="future-copy"><h3 data-i18n="event.arkadia.venue">Gallery Arkadia Design</h3><p>Gerbergasse 16 · 4051 Basel</p><p class="secondary-copy" data-i18n="event.arkadia.note">Email us your work or a link to your portfolio.</p><a class="text-link" data-apply href="mailto:artxmusicfestival@outlook.com?subject=Application%20%E2%80%93%20ArtXMusic%20at%20Arkadia%20Design%20%E2%80%93%2021%E2%80%9324%20January%202027" data-i18n-href="event.arkadia.mailto"><span data-i18n="event.arkadia.apply">Submit your work</span><svg class="action-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
+        <a class="instagram-note" href="https://www.instagram.com/artxmusicfestival/" target="_blank" rel="noopener noreferrer"><span><span data-i18n="t029">STAY CONNECTED</span></span><span data-i18n="t030">Follow us on Instagram ↗</span></a>
       </div>
       <div id="panel-past" role="tabpanel" aria-labelledby="tab-past" hidden>
         <article class="event-card">
-          <a class="event-image" href="festival-2026.html" aria-label="ArtXMusic Festival 2026 – Rückblick ansehen"><img src="assets/festival-2026.jpg" alt="Farbig beleuchtete Bäume – das Bildmotiv des ArtXMusic Festival 2026" width="1800" height="1009" loading="lazy"><span class="event-tag">RÜCKBLICK / 2026</span><span class="image-arrow" aria-hidden="true">↗</span></a>
-          <div class="event-card-copy"><span class="eyebrow">04.–05. SEPTEMBER 2026 · DORNACH</span><h3><a href="festival-2026.html">ArtXMusic<br><span class="serif-word">Festival.</span></a></h3><p>Kunst und Musik an einem Ort.<br>Unser Festival in der Tipioase.</p><a class="text-link" href="festival-2026.html">Zum Rückblick <span aria-hidden="true">↗</span></a></div>
+          <a class="event-image" href="festival-2026.html" aria-label="ArtXMusic Festival 2026 — explore the recap" data-i18n-aria-label="t097"><img src="assets/festival-2026/tipioase-night-800.jpg" alt="A lit tipi, potted palms and light projections on the festival grounds at night." width="800" height="600" loading="lazy" data-i18n-alt="t098"><span class="event-tag"><span data-i18n="t031">RECAP / 2026</span></span><span class="image-arrow" aria-hidden="true"><svg class="action-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a>
+          <div class="event-card-copy"><span class="eyebrow"><span data-i18n="t032">04–05 SEPTEMBER 2026 · DORNACH</span></span><h3><a href="festival-2026.html">ArtXMusic<br><span class="title-rest">Festival 2026</span></a></h3><p><span data-i18n="t033">Art and music in one place.</span><br><span data-i18n="t034">Our festival at Tipioase.</span></p><a class="text-link" href="festival-2026.html"><span data-i18n="t035">Explore the recap</span> <svg class="action-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
         </article>
       </div>
     </section>
 
+    <section class="archive-feature" aria-labelledby="archive-title">
+      <div class="page-width">
+        <div class="archive-heading"><div><p class="eyebrow" data-i18n="editorial.archive.label">From the archive</p><h2 id="archive-title" data-i18n="editorial.archive.title">Two days to remember</h2></div><p class="archive-date" data-i18n="editorial.archive.date">04–05 September 2026 · Dornach</p></div>
+        <div class="archive-layout">
+          <a class="archive-main-photo" href="festival-2026.html" aria-label="ArtXMusic Festival 2026 — explore the recap" data-i18n-aria-label="t097"><img src="assets/festival-2026/tipioase-night.jpg" width="1800" height="1350" alt="A lit tipi, potted palms and light projections on the festival grounds at night." data-i18n-alt="gallery.tipioase-night.alt" loading="lazy"><span class="image-arrow" aria-hidden="true"><svg class="action-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a>
+          <div class="archive-side"><a class="archive-detail-photo" href="festival-2026.html?lang=en#gallery" aria-label="ArtXMusic Festival 2026 — explore the recap" data-i18n-aria-label="t097"><img src="assets/festival-2026/industrial-light-800.jpg" width="600" height="800" alt="A large industrial tank and pipework lit in blue, green and pink." data-i18n-alt="gallery.industrial-light.alt" loading="lazy"></a><p data-i18n="editorial.archive.copy">Art, music and encounters at Tipioase. A look back at our festival in Dornach.</p><span class="archive-count" data-i18n="editorial.archive.count">7 photos · 2 videos</span><a class="text-link" href="festival-2026.html" data-i18n="editorial.archive.link">Explore the recap</a></div>
+        </div>
+      </div>
+    </section>
+
     <section class="about-section section-space" id="verein" aria-labelledby="about-title">
-      <div class="page-width"><div class="section-topline"><span class="eyebrow">02 / DIE IDEE DAHINTER</span><span class="small-note">Ein Verein. Viele Perspektiven.</span></div>
-      <div class="about-grid"><h2 id="about-title">Für neue<br>Stimmen.<br><span class="serif-word">Für uns alle.</span></h2><div class="about-copy"><span class="about-symbol" aria-hidden="true">×</span><p class="lead">Nicht jede starke Idee steht schon im Rampenlicht. Wir schaffen Raum dafür.</p><p>ArtXMusic verbindet Kunst und Musik. Unser «X» steht für die Begegnung dazwischen – zwischen Menschen, Ausdrucksformen und neuen Perspektiven.</p><p>Als Verein geben wir besonders aufstrebenden Kunstschaffenden, Musiker:innen und DJs eine Plattform. Für erste Auftritte, neue Verbindungen und kreative Entwicklung.</p><p>Mit Events, Projekten und Kooperationen fördern wir Austausch, Gemeinschaft und kulturelle Vielfalt.</p><a class="text-link" href="#mitmachen">Deine Idee hat hier Platz <span aria-hidden="true">↗</span></a></div></div>
-      <div class="team-intro"><h3>Die Menschen dahinter<span aria-hidden="true"> ↘</span></h3><span class="small-note">Drei Perspektiven. Eine gemeinsame Idee.</span></div>
+      <div class="page-width"><div class="section-topline"><span class="eyebrow"><span data-i18n="t036">02 / THE IDEA BEHIND IT</span></span><span class="small-note"><span data-i18n="t037">One association. Many perspectives.</span></span></div>
+      <div class="about-grid"><h2 id="about-title"><span data-i18n="quiet.hero.first">Art, music</span><br><span data-i18n="quiet.hero.second">and you</span></h2><div class="about-copy"><p class="lead"><span data-i18n="t041">Not every great idea is already in the spotlight. We make room for it.</span></p><p><span data-i18n="t042">ArtXMusic brings art and music together. Our “X” is the connection in between — between people, forms of expression and new perspectives.</span></p><p><span data-i18n="t043">As an association, we give emerging artists, musicians and DJs a platform. For first performances, new connections and creative growth.</span></p><p><span data-i18n="t044">Through events, projects and collaborations, we encourage exchange, community and cultural diversity.</span></p><a class="text-link" href="#mitmachen"><span data-i18n="t045">There is room for your idea</span> <svg class="action-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div></div>
+      <figure class="association-image"><img src="assets/festival-2026/projection-setup.jpg" width="1800" height="1350" alt="Two projectors beside a laptop in a warmly lit space with wooden flooring." data-i18n-alt="gallery.projection-setup.alt" loading="lazy"><figcaption data-i18n="editorial.about.caption">ArtXMusic Festival · Tipioase, Dornach · 2026</figcaption></figure>
+      <div class="team-intro"><h3><span data-i18n="t046">The people behind it</span></h3><span class="small-note"><span data-i18n="t047">Four perspectives. One shared idea.</span></span></div>
       <div class="team-grid">
-        <article class="team-card"><h4>Michelle Gyr</h4><p class="team-caption">Events & kreative Begegnungen</p><details open><summary>Mehr über Michelle <span aria-hidden="true">＋</span></summary><div class="bio"><p>Michelle kommt ursprünglich aus dem Transport- und Zollbereich. Über praktische Projekte und ihre Ausbildung zur Eventmanagerin fand sie zur Veranstaltungswelt – und lernte dabei Vincent kennen.</p><p>Mit ihrem gemeinsamen Abschlussprojekt «ArtConnection» legten sie den Grundstein für die Idee, neuen kreativen Stimmen eine Plattform zu geben. Diese Erfahrung bringt sie in ArtXMusic ein.</p></div></details></article>
-        <article class="team-card"><h4>Adriano Fontana</h4><p class="team-caption">Kunst, Raum & Licht</p><details open><summary>Mehr über Adriano <span aria-hidden="true">＋</span></summary><div class="bio"><p>Adriano ist Galerist, Kurator, Lichtdesigner und Inhaber von arkadia-design.ch. Er verbindet Kunst, Raum und Licht zu erlebbaren Atmosphären.</p><p>Mit der Programmgestaltung von Halle 80 und dem Hair Atelier schafft er Raum für zeitgenössische Kunst und Dialog. Offenheit, Experimentierfreude, klare Formen und ein bewusster Umgang mit Materialien prägen seine Arbeit.</p></div></details></article>
-        <article class="team-card"><h4>Vincent Villard</h4><p class="team-caption">Musik, Visuals & Verbindung</p><details open><summary>Mehr über Vincent <span aria-hidden="true">＋</span></summary><div class="bio"><p>Vincent beschäftigt sich mit visueller Kommunikation und digitalen Räumen an der Hochschule für Gestaltung und Kunst Basel. Seine kreativen Felder reichen von DJing und Musikproduktion bis zu Visuals und Kunst.</p><p>Aus seiner Erfahrung mit Kunst- und Musikevents wächst der Wunsch, Menschen zusammenzubringen. Er möchte Orte schaffen, an denen Austausch, gemeinsame kreative Energie und Zugehörigkeit entstehen.</p></div></details></article>
+        <article class="team-card"><div class="team-identity"><h4>Michelle</h4><p class="team-caption"><span data-i18n="t048">Events &amp; creative encounters</span></p></div><details><summary><span data-i18n="t049">More about Michelle</span> <span aria-hidden="true">＋</span></summary><div class="bio"><p><span data-i18n="t050">Michelle originally worked in transport and customs. Practical projects and her training in event management led her into the world of events — where she also met Vincent.</span></p><p><span data-i18n="t051">Their joint graduation project, “ArtConnection”, laid the foundation for giving new creative voices a platform. She brings that experience to ArtXMusic.</span></p></div></details></article>
+        <article class="team-card"><div class="team-identity"><h4>Adriano</h4><p class="team-caption"><span data-i18n="t052">Art, space &amp; light</span></p></div><details><summary><span data-i18n="t053">More about Adriano</span> <span aria-hidden="true">＋</span></summary><div class="bio"><p><span data-i18n="t054">Adriano is a gallerist, curator, lighting designer and owner of arkadia-design.ch. He brings art, space and light together to create immersive atmospheres.</span></p><p><span data-i18n="t055">Through his programming at Halle 80 and the Hair Atelier, he creates space for contemporary art and dialogue. Openness, experimentation, clear forms and a thoughtful approach to materials shape his work.</span></p><p><span data-i18n="adriano.gallery">Today, Adriano works as an independent gallerist. His gallery is located in the Kunstpassage at Gerbergasse 16.</span></p></div></details></article>
+        <article class="team-card"><div class="team-identity"><h4>Vincent</h4><p class="team-caption"><span data-i18n="t056">Music, visuals &amp; connection</span></p></div><details><summary><span data-i18n="t057">More about Vincent</span> <span aria-hidden="true">＋</span></summary><div class="bio"><p><span data-i18n="t058">Vincent explores visual communication and digital spaces at the Basel Academy of Art and Design. His creative practice ranges from DJing and music production to visuals and art.</span></p><p><span data-i18n="t059">His experience organising art and music events fuels his desire to bring people together. He wants to create places for exchange, shared creative energy and a sense of belonging.</span></p></div></details></article>
+        <article class="team-card"><div class="team-identity"><h4>Ivan</h4></div></article>
       </div></div>
     </section>
 
-    <section class="participate-section page-width section-space" id="mitmachen" aria-labelledby="participate-title"><div class="participate-label eyebrow">03 / DEIN PLATZ IST HIER</div><div class="participate-content"><h2 id="participate-title">Gute Ideen brauchen<br><span class="serif-word">gute Gesellschaft.</span></h2><div><p>Du machst Kunst oder Musik? Du möchtest mitgestalten oder mit uns zusammenarbeiten? Lass uns ins Gespräch kommen.</p><a class="solid-button" href="mailto:artxmusicfestival@outlook.com?subject=Bei%20ArtXMusic%20mitmachen">Lass uns etwas bewegen <span aria-hidden="true">↗</span></a><a class="membership-link" href="mailto:artxmusicfestival@outlook.com?subject=Interesse%20an%20einer%20Mitgliedschaft">Interesse an einer Mitgliedschaft? Schreib uns. ↗</a></div></div></section>
+    <section class="participate-section page-width section-space" id="mitmachen" aria-labelledby="participate-title"><div class="participate-label eyebrow"><span data-i18n="t060">03 / THERE IS A PLACE FOR YOU</span></div><div class="participate-content"><h2 id="participate-title" data-i18n="editorial.join.title">There is room for your idea</h2><div><p><span data-i18n="t063">Do you make art or music? Would you like to get involved or collaborate with us? Let’s start a conversation.</span></p><a class="solid-button" href="mailto:artxmusicfestival@outlook.com?subject=Get%20involved%20with%20ArtXMusic" data-i18n-href="t126"><span data-i18n="t064">Let’s make something happen</span> <svg class="action-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a class="membership-link" href="mailto:artxmusicfestival@outlook.com?subject=ArtXMusic%20membership%20enquiry" data-i18n-href="t127"><span data-i18n="t065">Interested in becoming a member? Get in touch. ↗</span></a></div></div></section>
+<section class="donation-section section-space" id="donate" aria-labelledby="donation-title"><div class="page-width donation-grid"><div><span class="eyebrow"><span data-i18n="t108">04 / MAKE IT POSSIBLE</span></span><h2 id="donation-title" data-i18n="editorial.support.title">Room for culture. Thanks to you.</h2></div><div class="donation-copy"><p><span data-i18n="t111">Your support helps us create space for art, music and encounters. Every contribution helps us take this idea further.</span></p><a class="solid-button" data-donate href="https://go.twint.ch/1/e/tw?tw=acq.vQNoNnbLTWy0y0OU8Lz0jm_Cxkv4LPFudftPimvvcaQTjJB5cDMrlpiIhuMeUNQD." target="_blank" rel="noopener noreferrer"><span data-i18n="t112">Donate with TWINT</span> <svg class="action-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a><p class="donation-status"><span data-i18n="t113">Choose your amount and confirm in TWINT.</span></p></div></div></section>
   </main>
 
-  <footer class="site-footer" id="kontakt"><div class="page-width"><div class="footer-top"><span class="eyebrow">IN VERBINDUNG BLEIBEN</span><a href="#start" class="back-top" aria-label="Zurück nach oben">↑</a></div><a class="footer-email" href="mailto:artxmusicfestival@outlook.com">Sag <span class="serif-word">Hallo.</span><span aria-hidden="true">↗</span></a><div class="footer-links"><a href="mailto:artxmusicfestival@outlook.com">artxmusicfestival@outlook.com ↗</a><a href="https://www.instagram.com/artxmusicfestival/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><span>ARTXMUSIC · SCHWEIZ</span></div><div class="footer-brand" aria-hidden="true">Art<span>X</span>Music</div><div class="footer-bottom"><span>© 2026 ArtXMusic</span><span>BEYOND THE SPOTLIGHT.</span><span>Kunst. Musik. Miteinander.</span></div></div></footer>
+  <footer class="site-footer" id="kontakt"><div class="page-width">
+    <div class="footer-main"><div><span class="eyebrow" data-i18n="t003">Contact</span><a class="footer-email" href="mailto:artxmusicfestival@outlook.com">artxmusicfestival@outlook.com</a></div><div class="footer-links"><a href="https://www.instagram.com/artxmusicfestival/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="#top" class="back-top" data-i18n="quiet.back">Back to top</a></div></div>
+    <div class="footer-bottom"><span class="footer-wordmark">ArtXMusic</span><span>BEYOND THE SPOTLIGHT</span><span>© 2026 ArtXMusic</span></div>
+  </div></footer>
 </body>
 </html>

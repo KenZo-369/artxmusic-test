@@ -21,7 +21,7 @@ document.addEventListener('keydown', event => {
     menuToggle.focus();
   }
 });
-window.matchMedia('(min-width: 721px)').addEventListener('change', closeMenu);
+window.matchMedia('(min-width: 1351px)').addEventListener('change', closeMenu);
 
 const tabs = [...document.querySelectorAll('[role="tab"]')];
 function selectTab(tab, focus = false) {
@@ -55,11 +55,21 @@ if (window.location.hash === '#vergangene-events') {
   }
 }
 
+const festivalVideos = [...document.querySelectorAll('[data-festival-video]')];
+festivalVideos.forEach(video => {
+  video.addEventListener('play', () => {
+    festivalVideos.forEach(other => {
+      if (other !== video) other.pause();
+    });
+  });
+});
+
 document.querySelector('[data-load-video]')?.addEventListener('click', event => {
+  festivalVideos.forEach(video => video.pause());
   const shell = event.currentTarget.closest('.video-shell');
   const frame = document.createElement('iframe');
   frame.src = 'https://www.youtube-nocookie.com/embed/p3mfjIPnBfQ?autoplay=1&rel=0';
-  frame.title = 'ArtXMusic Festival 2026 – Video';
+  frame.title = window.ArtXMusicLocale?.language === 'de' ? 'ArtXMusic Festival 2026 – Video' : 'ArtXMusic Festival 2026 — Video';
   frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
   frame.allowFullscreen = true;
   frame.referrerPolicy = 'strict-origin-when-cross-origin';
@@ -68,9 +78,33 @@ document.querySelector('[data-load-video]')?.addEventListener('click', event => 
 });
 
 const lightbox = document.getElementById('photo-lightbox');
-document.querySelector('[data-open-photo]')?.addEventListener('click', () => {
-  lightbox.showModal();
-  document.body.style.overflow = 'hidden';
+const photoButtons = [...document.querySelectorAll('[data-open-photo]')];
+let photoIndex = 0;
+function selectPhoto(index) {
+  if (!lightbox || !photoButtons.length) return;
+  photoIndex = (index + photoButtons.length) % photoButtons.length;
+  const trigger = photoButtons[photoIndex];
+  const source = trigger.querySelector('img');
+  const image = lightbox.querySelector('[data-photo-image]');
+  const caption = trigger.closest('figure')?.querySelector('[data-photo-label]');
+  image.src = source.dataset.fullSrc || source.currentSrc || source.src;
+  image.alt = source.alt;
+  lightbox.querySelector('[data-photo-caption]').textContent = caption?.textContent || source.alt;
+  lightbox.querySelector('[data-photo-counter]').textContent = `${String(photoIndex + 1).padStart(2, '0')} / ${String(photoButtons.length).padStart(2, '0')}`;
+}
+photoButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    selectPhoto(index);
+    lightbox.showModal();
+    document.body.style.overflow = 'hidden';
+  });
+});
+document.querySelector('[data-photo-prev]')?.addEventListener('click', () => selectPhoto(photoIndex - 1));
+document.querySelector('[data-photo-next]')?.addEventListener('click', () => selectPhoto(photoIndex + 1));
+lightbox?.addEventListener('keydown', event => {
+  if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+  event.preventDefault();
+  selectPhoto(photoIndex + (event.key === 'ArrowRight' ? 1 : -1));
 });
 document.querySelector('[data-close-photo]')?.addEventListener('click', () => lightbox.close());
 lightbox?.addEventListener('click', event => {
@@ -80,3 +114,13 @@ lightbox?.addEventListener('click', event => {
   }
 });
 lightbox?.addEventListener('close', () => { document.body.style.overflow = ''; });
+
+// Keep the static donation anchors aligned with the shared public URL.
+try {
+  const destination = new URL(window.ArtXMusicDonations?.url);
+  if (destination.protocol === 'https:') {
+    document.querySelectorAll('[data-donate]').forEach(link => {
+      link.href = destination.href;
+    });
+  }
+} catch (_) {}
