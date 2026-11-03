@@ -254,8 +254,8 @@
     "en": "good company."
   },
   "t063": {
-    "de": "Du machst Kunst oder Musik? Du möchtest mitgestalten oder mit uns zusammenarbeiten? Lass uns ins Gespräch kommen.",
-    "en": "Do you make art or music? Would you like to get involved or collaborate with us? Let’s start a conversation."
+    "de": "Du machst Kunst oder Performances, legst auf, singst oder spielst ein Instrument? Möchtest du – gerne auch mit deinen Freunden – mitgestalten oder mit uns zusammenarbeiten? Tell us please!",
+    "en": "Do you make art or perform, DJ, sing or play an instrument? Would you like to get involved or collaborate with us — perhaps with your friends? Please let us know!"
   },
   "t064": {
     "de": "Lass uns etwas bewegen",
@@ -446,8 +446,8 @@
     "en": "room to grow."
   },
   "t111": {
-    "de": "Mit deiner Unterstützung schaffen wir Raum für Kunst, Musik und Begegnungen. Jeder Beitrag hilft uns, diese Idee weiterzutragen.",
-    "en": "Your support helps us create space for art, music and encounters. Every contribution helps us take this idea further."
+    "de": "Mit deiner Unterstützung schaffen wir Raum für Kunst, Musik und Begegnungen.",
+    "en": "Your support helps us create space for art, music and encounters."
   },
   "t112": {
     "de": "Mit TWINT spenden",
@@ -594,8 +594,8 @@
     "en": "Play background"
   },
   "event.arkadia.label": {
-    "de": "Nächster Event",
-    "en": "Next event"
+    "de": "Nächster Event:",
+    "en": "Next event:"
   },
   "event.arkadia.gallery": {
     "de": "Galerie",
@@ -746,8 +746,8 @@
     "en": "From the archive"
   },
   "editorial.archive.title": {
-    "de": "Zwei Tage, die bleiben",
-    "en": "Two days to remember"
+    "de": "Eindrücke des ArtXMusic-Festivals in der Tipi Oase, Dornach.",
+    "en": "Impressions of the ArtXMusic Festival at Tipi Oase, Dornach."
   },
   "editorial.archive.copy": {
     "de": "Kunst, Musik und Begegnungen in der Tipioase. Ein Blick zurück auf unser Festival in Dornach.",
@@ -770,8 +770,8 @@
     "en": "There is room for your idea"
   },
   "editorial.support.title": {
-    "de": "Raum für Kultur. Dank dir.",
-    "en": "Room for culture. Thanks to you."
+    "de": "Raum für Kultur.",
+    "en": "Room for culture."
   },
   "editorial.about.caption": {
     "de": "ArtXMusic Festival · Tipioase, Dornach · 2026",
@@ -780,6 +780,18 @@
   "editorial.program": {
     "de": "Programm",
     "en": "Programme"
+  },
+  "ivan.caption": {
+    "de": "Ein geheimnisvoller Zauberer aus einer unbekannten Dimension.",
+    "en": "A mysterious wizard from an unknown dimension."
+  },
+  "donate.continued": {
+    "de": "Jeder Beitrag hilft uns, diese Idee weiterzutragen.",
+    "en": "Every contribution helps us take this idea further."
+  },
+  "editorial.support.thanks": {
+    "de": "Dank dir.",
+    "en": "Thanks to you."
   }
 };
 

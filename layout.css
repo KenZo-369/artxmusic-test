@@ -5,6 +5,7 @@ h1,h2,h3,h4{letter-spacing:0;text-wrap:balance}
 h2{font-size:clamp(44px,3.8vw,76px);line-height:1.18}
 .section-space{padding-block:112px}
 .eyebrow{font-size:15px;letter-spacing:.055em;line-height:1.6}
+.menu-toggle,.event-tabs button,.count,.language-switch,.footer-links,.application-email,.instagram-note{font-weight:var(--weight-label)}
 .small-note,.section-topline>.small-note,.team-intro .small-note{font-size:17px;line-height:1.65}
 .site-background::after{background:rgba(245,244,240,.94)}
 .site-header{min-height:112px;max-width:var(--width)}
@@ -38,16 +39,17 @@ h2{font-size:clamp(44px,3.8vw,76px);line-height:1.18}
 .hero-film figcaption{font-size:15px;line-height:1.65;margin-top:14px;color:var(--muted)}
 .featured-event-footer{padding-block:28px 32px;gap:48px;border-bottom:0}
 .featured-event-footer p{font-size:21px;line-height:1.6;max-width:48ch}
+.copy-line{display:block}
 .manifesto-strip{padding:28px 0;margin:0;background:var(--white);border-block:1px solid var(--line)}
 .manifesto-strip>div{padding:0;border:0;align-items:center;gap:24px}
-.strip-message,.strip-motto{font-size:clamp(17px,1.35vw,26px);line-height:1.35;font-weight:600;letter-spacing:0}
+.strip-message,.strip-motto{font-size:clamp(17px,1.35vw,26px);line-height:1.35;font-weight:var(--weight-label);letter-spacing:0}
 .section-topline{margin-bottom:24px;gap:40px}
 .section-heading{margin-bottom:36px}
 .event-tabs{gap:40px}
 .event-tabs button{font-size:18px;line-height:1.5;min-height:68px;padding-block:18px}
 .count{font-size:14px}
 .future-panel{column-gap:7%;row-gap:32px;padding:40px;margin-top:32px;background:#ffffffeb;grid-template-columns:minmax(0,.9fr) minmax(0,1.6fr)}
-.future-label{font-size:32px;font-weight:600;line-height:1.35;letter-spacing:0;text-transform:none;max-width:14ch}
+.future-label{font-size:32px;font-weight:var(--weight-heading);line-height:1.35;letter-spacing:0;text-transform:none;max-width:14ch}
 .future-copy h3{font-size:36px;line-height:1.25;margin-bottom:16px}
 .future-copy p{font-size:21px;line-height:1.6}
 .future-copy .secondary-copy{font-size:18px;line-height:1.65;margin-top:16px}
@@ -60,7 +62,7 @@ h2{font-size:clamp(44px,3.8vw,76px);line-height:1.18}
 .event-card-copy .eyebrow,.video-heading .eyebrow,.event-detail-header>.eyebrow{font-size:15px}
 .archive-feature{padding-block:104px 120px;background:var(--paper)}
 .archive-heading{display:flex;justify-content:space-between;align-items:end;gap:48px;margin-bottom:44px}
-.archive-heading h2{margin-top:20px;max-width:14ch}
+.archive-heading h2{margin-top:20px;max-width:22ch}
 .archive-date{font-size:18px;line-height:1.65;text-align:right;max-width:25ch;padding-bottom:6px}
 .archive-layout{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(0,.85fr);gap:6%;align-items:start}
 .archive-main-photo,.archive-detail-photo{display:block;position:relative;overflow:hidden;background:#1c211d}
@@ -102,10 +104,10 @@ h2{font-size:clamp(44px,3.8vw,76px);line-height:1.18}
 .donation-status{color:#eef0e9;font-size:16px;line-height:1.65;margin-top:22px}
 .site-footer{background:var(--paper);padding-block:80px 100px;border-top:0}
 .footer-main{padding-bottom:60px}
-.footer-email{font-size:clamp(23px,2vw,36px);line-height:1.5;font-weight:600}
+.footer-email{font-size:clamp(23px,2vw,36px);line-height:1.5;font-weight:var(--weight-label)}
 .footer-links{font-size:17px;gap:36px}
-.footer-bottom{font-size:14px;line-height:1.6}
-.footer-wordmark{font-size:36px}
+.footer-bottom{font-size:16px;line-height:1.6}
+.footer-wordmark{font-size:inherit;line-height:inherit}
 .event-detail-header{padding-block:36px}
 .back-link{font-size:17px}
 .detail-hero{padding-block:44px 56px}
@@ -235,9 +237,9 @@ h2{font-size:clamp(44px,3.8vw,76px);line-height:1.18}
   .site-footer{padding-block:56px 100px}
   .footer-email{font-size:21px;line-height:1.55;overflow-wrap:anywhere}
   .footer-links{font-size:16px;gap:28px}
-  .footer-bottom{font-size:13px}
-  .footer-wordmark{font-size:30px}
-  .footer-bottom>span:nth-child(2){font-size:13px}
+  .footer-bottom{font-size:15px}
+  .footer-wordmark{font-size:inherit}
+  .footer-bottom>span:nth-child(2){font-size:inherit}
   .event-detail-header{padding-block:28px}
   .back-link{font-size:15px}
   .detail-hero h1{font-size:clamp(36px,8.5vw,54px);line-height:1.2}
@@ -271,3 +273,6 @@ h2{font-size:clamp(44px,3.8vw,76px);line-height:1.18}
 .background-toggle>span{gap:0}
 .background-toggle-icon{width:16px;height:16px}
 .background-toggle [data-i18n]{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* The same family supplies a true extra-bold weight for the shared motto. */
+.strip-motto,.brand-motto{font-weight:800}

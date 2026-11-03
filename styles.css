@@ -6,6 +6,14 @@
   src:url('assets/fonts/manrope-latin-variable.woff2') format('woff2');
 }
 
+@font-face{
+  font-family:'Manrope';
+  font-style:normal;
+  font-weight:800;
+  font-display:swap;
+  src:url('assets/fonts/manrope-extra-bold-variable.ttf') format('truetype');
+}
+
 :root{
   --paper:#f5f4f0;
   --white:#fff;
@@ -16,8 +24,8 @@
   --width:1480px;
   --font:'Manrope','Helvetica Neue',Helvetica,Arial,sans-serif;
   --weight-text:500;
-  --weight-label:600;
-  --weight-heading:600;
+  --weight-label:700;
+  --weight-heading:700;
   --label-spacing:.06em;
   --control-line:#6e7469;
   --control-radius:999px;
