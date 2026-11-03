@@ -77,10 +77,6 @@
     "de": "Events & Begegnungen",
     "en": "Events & encounters"
   },
-  "t019": {
-    "de": "Neue Begegnungen. Bleibende Erinnerungen.",
-    "en": "New encounters. Lasting memories."
-  },
   "t020": {
     "de": "Momente,",
     "en": "Moments"
@@ -485,10 +481,6 @@
     "de": "Auf Englisch wechseln",
     "en": "Switch to English"
   },
-  "t121": {
-    "de": "SITZ IN BASEL, SCHWEIZ",
-    "en": "BASED IN BASEL, SWITZERLAND"
-  },
   "t122": {
     "de": "AUS DER SCHWEIZ",
     "en": "FROM SWITZERLAND"
@@ -714,8 +706,8 @@
     "en": "Two projectors beside a laptop in a warmly lit space with wooden flooring."
   },
   "gallery.video.title": {
-    "de": "Das Festival in Bewegung",
-    "en": "The festival in motion"
+    "de": "Vorher, nachher.",
+    "en": "Before and after."
   },
   "gallery.video.setup": {
     "de": "Hinter den Kulissen",
@@ -730,8 +722,8 @@
     "en": "No audio"
   },
   "gallery.youtube": {
-    "de": "Festivalfilm auf YouTube ansehen",
-    "en": "Watch the festival film on YouTube"
+    "de": "Erste Schritte des Festivals auf YouTube ansehen.",
+    "en": "Watch the festival’s first steps on YouTube."
   },
   "editorial.film.label": {
     "de": "Kunst in Bewegung",
@@ -746,8 +738,8 @@
     "en": "From the archive"
   },
   "editorial.archive.title": {
-    "de": "Eindrücke des ArtXMusic-Festivals in der Tipi Oase, Dornach.",
-    "en": "Impressions of the ArtXMusic Festival at Tipi Oase, Dornach."
+    "de": "Eindrücke des ArtXMusic-Festivals in der",
+    "en": "Impressions of the ArtXMusic Festival at"
   },
   "editorial.archive.copy": {
     "de": "Kunst, Musik und Begegnungen in der Tipioase. Ein Blick zurück auf unser Festival in Dornach.",
@@ -792,6 +784,10 @@
   "editorial.support.thanks": {
     "de": "Dank dir.",
     "en": "Thanks to you."
+  },
+  "editorial.archive.venue": {
+    "de": "Tipi Oase, Dornach.",
+    "en": "Tipi Oase, Dornach."
   }
 };
 
